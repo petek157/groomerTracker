@@ -1,5 +1,9 @@
 import React, {Component} from 'react'
+import Nav from './Nav.js'
+import Jumbotron from './Jumbotron.js'
 import SecContentPic from './SecContentPic.js'
+import SecPicContent from './SecPicContent.js'
+import Footer from './Footer.js'
 
 class Home extends Component {
     constructor(props) {
@@ -14,7 +18,13 @@ class Home extends Component {
     }
     render() { 
         return ( 
-            <SecContentPic/>
+            <div id="page">
+                <Nav />
+                <Jumbotron />
+                <SecContentPic />
+                <SecPicContent />
+                <Footer />
+            </div>
          );
     }
 }

@@ -9,7 +9,7 @@ const Section = styled.section`
 
 const Pic = styled.div`
     padding: 15px;
-
+    
     img {
         max-height: 250px;
     }
@@ -18,11 +18,14 @@ const Pic = styled.div`
 const Content = styled.div`
     padding: 15px;
     color: green;
-    text-align: left;
+    text-align: right;
     font-size 2em;
 `
+const Heavy = styled.span`
+    font-weight: bold;
+`
 
-class SecContentPic extends Component {
+class PicContent extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -30,15 +33,16 @@ class SecContentPic extends Component {
     render() { 
         return ( 
             <Section className="contentPic">
-                <Content className="content-left">
-                    Use the app to track the current location of the groomer and its recent history. That way you will have the best chance of having great smooth trails.
-                </Content>
-                <Pic className="pic-right">
-                    <img src={MyImage} alt="Peter" />
+                <Pic className="pic-left">
+                    <img src={MyImage} alt="" />
                 </Pic>
+                <Content className="content-right">
+                    <Heavy className="heavy">100%</Heavy>, yes 100% of the profits from your subscription get donated directly to the local snowmobile/atv club of the area from the subscription.
+                </Content>
+                
             </Section>
          );
     }
 }
  
-export default SecContentPic;
+export default PicContent;
